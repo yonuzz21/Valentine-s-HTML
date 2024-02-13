@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <style>
+    .status {
+      text-align: center;
+    }
+
+    .Val {
+      text-align: center;
+      font-family: cursive;
+    }
+
+    .button {
+      background-color: rgb(188, 6, 243);
+    }
+  
+   </style>
+
+   <script>
+
+    function increaseSize() {
+      var element = document.getElementById("Yes");
+      var currentSize = parseInt(window.getComputedStyle(element).fontSize);
+      var newSize = currentSize + 10;
+      element.style.fontSize = newSize + "px";
+}
+
+    
+
+   </script>
+</head>
+
+<body>
+  <div class= "status">
+  <img src="bear.png">
+  
+
+  <h1 class="Val">Will you be my Valentine?</h1>
+
+  <button class = "yes" id="Yes">Yes</button>
+  <button class = "no" onclick="increaseSize()">No</button>
+  </div>
+</body>
+</html>
