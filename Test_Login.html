@@ -5,6 +5,11 @@
    <style>
     .status {
       text-align: center;
+     
+    }
+
+    body{
+      background-color: rgb(242,233,225);
     }
 
     .Val {
@@ -12,8 +17,10 @@
       font-family: cursive;
     }
 
-    .button {
-      background-color: rgb(188, 6, 243);
+    .choice {
+      color: #e88137;
+      background-color:rgb(242,233,225);
+      
     }
   
    </style>
@@ -25,22 +32,40 @@
       var currentSize = parseInt(window.getComputedStyle(element).fontSize);
       var newSize = currentSize + 10;
       element.style.fontSize = newSize + "px";
-}
+      
+      if (newSize >= 40){
+        var change = document.getElementById("image1");
+        change.src = "images.jpeg";
+      }
 
-    
+      if (newSize >= 100){
+        var change2 = document.getElementById("image1");
+        change2.src = "images-2.jpeg";
+      }}
 
-   </script>
+      function pressYes(){
+        var change3 = document.getElementById("image1");
+        change3.src = "bear-kiss-bear-kisses.gif"
+        
+        var text = document.getElementById("text");
+        text.textContent = "Happy Valentine's my Love !"
+      }
+      
+
+    </script>
+
 </head>
+
 
 <body>
   <div class= "status">
-  <img src="bear.png">
+  <img src="images-3.jpeg" id="image1">
   
 
-  <h1 class="Val">Will you be my Valentine?</h1>
+  <h1 class="Val" id="text">Will you be my Valentine?</h1>
 
-  <button class = "yes" id="Yes">Yes</button>
-  <button class = "no" onclick="increaseSize()">No</button>
+  <button class = "choice" id="Yes" onclick="pressYes()">Yes</button>
+  <button class = "choice" onclick="increaseSize()">No</button>
   </div>
 </body>
 </html>
